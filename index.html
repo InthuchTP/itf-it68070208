@@ -2,26 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ITF Simple Bank</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <p>68070208</p>
+        <span>68070208</span>
         <h2>ITF Website</h2>
-        <p>Week 14</p>
+        <span>Week 14</span>
     </nav>
-    <div class="container">
-        <img src="Cool.png" width="96" alt="Cool">
+
+    <div class="header">
+        <img src="Cool.png" width="80" alt="logo">
         <div>
-            Enter number: <input type="number" id="myinput" value="0">
-            <button onclick="add()">+1</button>
-        </div>
-        <div>
-            right
+            <h1>ITF Simple Bank</h1>
+            <p>Welcome to my first HTML + CSS + JS website!</p>
         </div>
     </div>
+
+    <textarea id="history" rows="8" cols="100">
+1, Current account balance: 1000, Current cash balance: 1000
+    </textarea>
+
+    <table width="100%">
+        <tr>
+            <td valign="top" width="50%">
+                <h3>Account Overview</h3>
+
+                <h4>Account Information</h4>
+                <div class="info-row">
+                    <img src="pngegg.png" width="55">
+                    <p>
+                        Name : Inthuch Thipwet<br>
+                        Type : Young Dumb and Broke Account
+                    </p>
+                </div>
+
+                <h4>Balance Information</h4>
+                <div class="info-row">
+                    <img src="pngegg (1).png" width="60">
+                    <div>
+                        Current account balance:
+                        <input type="number" id="acc" value="1000"><br>
+                        Current cash balance:
+                        <input type="number" id="cash" value="1000"><br>
+                        <button onclick="changeBalance()">Change</button>
+                    </div>
+                </div>
+
+                <h4>Bank Operation</h4>
+                <div class="info-row">
+                    <img src="pngegg (2).png" width="70">
+                    <div>
+                        <select id="action">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="amount" value="1">
+                        <button onclick="proceed()">Proceed</button>
+                    </div>
+                </div>
+            </td>
+
+            <td valign="top" width="50%">
+                <h3>Financial Tools</h3>
+
+                <h4>Currency Converter</h4>
+                <div class="info-row">
+                    <img src="pngegg (3).png" width="70">
+                    <div>
+                        Input balance:
+                        <input type="number" id="inputAmount" value="0"><br>
+                        Output balance:
+                        <input type="text" value="0" readonly><br>
+                        Input currency:
+                        <select>
+                            <option>USD</option>
+                            <option>THB</option>
+                        </select>
+                        <button>Convert</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
     <script src="script.js"></script>
 </body>
 </html>
